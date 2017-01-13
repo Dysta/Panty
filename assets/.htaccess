@@ -1,0 +1,28 @@
+Deny from all
+<Files *.js>
+ allow from all
+</Files>
+<Files *.css>
+ allow from all
+</Files>
+<Files *.png>
+ allow from all
+</Files>
+<Files *.jpg>
+ allow from all
+</Files>
+<Files *.gif>
+ allow from all
+</Files>
+<Files *.eot>
+ allow from all
+</Files>
+<Files *.svg>
+ allow from all
+</Files>
+<Files *.woff>
+ allow from all
+</Files>
+<Files *.ttf>
+ allow from all
+</Files>

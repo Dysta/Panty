@@ -10,6 +10,7 @@
 		<link href="{$URL_ASSETS}css/jquery-ui.css" type="text/css" rel="stylesheet">
 		<link href="{$URL_ASSETS}css/ui.selectmenu.css" type="text/css" rel="stylesheet">
 		<script src="//api.dedipass.com/v1/pay.js"></script>
+		<script src="{$URL_ASSETS_GLOBAL}ckeditor/ckeditor.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -166,4 +167,7 @@
 			</div>
 		</div>
 	</body>
+	<script>
+        CKEDITOR.replace( 'ckeditor' );
+    </script>
 </html>

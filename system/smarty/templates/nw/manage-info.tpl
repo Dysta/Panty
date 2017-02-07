@@ -1,5 +1,5 @@
 {extends file="$THEME/layout.tpl"}
-{block name=title}Profil{/block}<br/>
+{block name=title}Gestion du profil{/block}<br/>
 {block name=body}
 <div id="contenu">
 				<img src="{$URL_ASSETS}img/global/topContenu.png"/> 

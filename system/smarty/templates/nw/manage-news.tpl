@@ -68,7 +68,7 @@
 			<input type="text" name="title" placeholder="Titre news" style="color:black;"/>
 			<br />
 			<br />
-			<textarea id="ckeditor" name="message" style="width:594px;color:black;resize:none;" placeholder="Contenu news" ></textarea>
+			<textarea id="ckeditor" name="message" placeholder="Contenu news" ></textarea>
 			<br />
 			<br />
 			Type : 

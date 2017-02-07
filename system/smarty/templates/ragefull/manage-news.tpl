@@ -62,7 +62,7 @@
 			<input type="text" name="title" placeholder="Titre news"/>
 			<br />
 			<br />
-			<textarea name="message" style="width: 100%;" placeholder="Contenu news"></textarea>
+			<textarea name="message" id="ckeditor" placeholder="Contenu news"></textarea>
 			<br />
 			<br />
 			Type : 

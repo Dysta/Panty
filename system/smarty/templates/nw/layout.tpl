@@ -15,10 +15,7 @@
 				$('#slider').nivoSlider();
 			});
 		</script>
-		<script src="//cdn.ckeditor.com/4.6.0/standard/ckeditor.js"></script>		
-		<script>
-            CKEDITOR.replace( 'ckeditor' );
-        </script>
+		<script src="{$URL_ASSETS_GLOBAL}ckeditor/ckeditor.js"></script>
 		<!--[if lte IE 8]><script type="text/javascript" src="{$URL_ASSETS}js/roundies.js"></script><![endif]-->
 		<script type="text/javascript" src="{$URL_ASSETS}js/yuiloader-min.js"></script>
 		<script type="text/javascript" src="{$URL_ASSETS}js/yahoo-dom-event.js"></script>
@@ -165,4 +162,7 @@
 			<div id="footer"></div>
 		</div>
 	</body>
+	<script>
+		CKEDITOR.replace( 'ckeditor' );
+    </script>
 </html>

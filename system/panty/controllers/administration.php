@@ -80,7 +80,7 @@ class Administration_Controller extends TinyMVC_Controller
 				} //($_SESSION['banned']) == 1
 			$this->load->model('News_Model', 'news');
 			if (isset($_POST['news']) && strlen($_POST['message']) >= 10 && strlen($_POST['title']) >= 2) {
-				$message = nl2br(trim(strip_tags($_POST['message'], '<br><font><span><b><i><strong><strike>')));
+				$message = nl2br(trim(strip_tags($_POST['message'], '<br><font><span><b><i><strong><strike><p><em><s><ol><ul><blockquote><li><a><img><table><tbody><tr><td><hr>')));
 				$title   = $_POST['title'];
 				$type    = (int) $_POST['type'];
 				$user    = htmlentities($_SESSION['pseudo']);

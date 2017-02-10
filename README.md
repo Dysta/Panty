@@ -11,7 +11,7 @@ Panty est un CMS public avec un code potable et lisible, fournissant des perform
 Installation
 ====
 
-1) Téléchargez l'archive de Panty en cliquant sur le bouton "Download ZIP" à droite de votre écran.<br />
+1) Téléchargez l'archive de Panty en cliquant ici [Télécharger Panty](https://github.com/Dysta40/PantyCMS/archive/master.zip)<br />
 2) Dézippez le contenu de l'archive dans le dossier de votre choix, à l'intérieur du dossier "www" pour Wamp, ou à l'intérieur du dossier "htdocs" pour Xampp.<br />
 3) Rendez-vous dans le dossier system -> panty -> configs, éditez le fichier "Panty.php" avec un éditeur de texte avec les informations correspondantes.<br />
 4) Allez dans le dossier "_ressources" et exécutez le fichier "panty_sql.sql" sur votre base de données. ATTENTION : Cochez la case "run on errors" !<br />

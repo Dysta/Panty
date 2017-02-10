@@ -52,11 +52,9 @@ Configuration de DediPass
 </details><br />
 6) Entrez la PUBLIC_KEY_DEDIPASS & la PRIVATE_KEY_DEDIPASS dans les lignes qui correspondent<br />
 
+Fonctionnalités
+====
 <details> 
-  <summary>
-  Fonctionnalités
-  ====
-  </summary>
     <dd>
 	<ul>
 		<li>Les news

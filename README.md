@@ -1,4 +1,4 @@
-<center>![Image](http://puu.sh/8SjLG.png)</center>
+<p align="center"><img src="http://puu.sh/8SjLG.png" width="50%"><br>CMS for Dofus 1.29.1</p>
 
 Informations
 ====

@@ -1,3 +1,5 @@
+<center>![Image](http://puu.sh/8SjLG.png)</center>
+
 Informations
 ====
 

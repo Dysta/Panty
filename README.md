@@ -20,7 +20,11 @@ Installation
 Configuration de StarPass
 ====
 
-1) Rendez-vous sur le site de StarPass et créez un document de payemment. (pour la configuration, ce référer aux screen dans le dossier "_ressources")<br />
+1) Rendez-vous sur le site de StarPass et créez un document de payemment. 
+<details> 
+  <summary>Configuration du document StarPass</summary>
+    ![Image](https://github.com/Dysta40/PantyCMS/blob/master/_ressources/panty_config_starpass.png)
+</details><br />
 2) Rendez-vous dans le dossier system/panty/configs et ouvrez le fichier Panty.php pour configurer le CMS.<br />
 3) A la ligne METHODE_PAYEMENT, choisissez 1<br />
 4) Entrez votre IDD & votre IPD StarPass dans les lignes qui correspondent<br />

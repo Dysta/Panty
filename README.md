@@ -1,4 +1,4 @@
-<p align="center"><img src="http://puu.sh/8SjLG.png" width="50%"><br>CMS for Dofus 1.29.1</p>
+<p align="center"><img src="http://puu.sh/8SjLG.png" width="50%"><br>CMS pour Dofus 1.29.1</p>
 
 Informations
 ====

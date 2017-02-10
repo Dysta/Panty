@@ -51,10 +51,13 @@ Configuration de DediPass
     ![Image](https://github.com/Dysta40/PantyCMS/blob/master/_ressources/panty_config_dedipass_key.png)
 </details><br />
 6) Entrez la PUBLIC_KEY_DEDIPASS & la PRIVATE_KEY_DEDIPASS dans les lignes qui correspondent<br />
-      
-Fonctionnalités
-====
-<dd>
+
+<details> 
+  <summary>
+  Fonctionnalités
+  ====
+  </summary>
+    <dd>
 	<ul>
 		<li>Les news
 			<ul>
@@ -260,4 +263,5 @@ Fonctionnalités
 		</li>
 	</ul>		
 	</dd>
-	</dl>
+</details>
+

@@ -11,6 +11,9 @@ Deny from all
 <Files *.jpg>
  allow from all
 </Files>
+<Files *.jpeg>
+ allow from all
+</Files>
 <Files *.gif>
  allow from all
 </Files>

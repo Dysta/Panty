@@ -13,7 +13,7 @@ Installation
 
 1) Téléchargez l'archive de Panty en cliquant ici : [![Dowload](https://img.shields.io/badge/T%C3%A9l%C3%A9charger-Panty-brightgreen.svg)](https://github.com/Dysta40/PantyCMS/archive/master.zip)<br />
 2) Dézippez le contenu de l'archive dans le dossier de votre choix, à l'intérieur du dossier "www" pour Wamp, ou à l'intérieur du dossier "htdocs" pour Xampp.<br />
-3) Rendez-vous dans le dossier system -> panty -> configs, éditez le fichier "Panty.php" avec un éditeur de texte avec les informations correspondantes.<br />
+3) Rendez-vous dans le dossier system -> panty -> configs, éditez le fichier "Panty.php" avec les informations de votre serveur.<br />
 4) Allez dans le dossier "_ressources" et exécutez le fichier "panty_sql.sql" sur votre base de données. ATTENTION : Cochez la case "run on errors" !<br />
 5) Rendez vous à l'adresse du CMS, et tout devrait fonctionner !<br />
 
@@ -23,7 +23,7 @@ Configuration de StarPass
 1) Rendez-vous sur le site de StarPass et créez un document de payemment.<br />
 <details> 
   <summary>Configuration du document StarPass</summary>
-    ![Image](https://github.com/Dysta40/PantyCMS/blob/master/_ressources/panty_config_starpass.png)
+    ![Image](/_ressources/panty_config_starpass.png)
 </details><br />
 2) Rendez-vous dans le dossier system/panty/configs et ouvrez le fichier Panty.php pour configurer le CMS.<br />
 3) A la ligne METHODE_PAYEMENT, choisissez 1<br />
@@ -35,20 +35,20 @@ Configuration de DediPass
 1) Rendez-vous sur le site de DediPass et créez un document de payemment en séléctionnant l'option produit unique.<br />
 <details> 
   <summary>Configuration du document DediPass</summary>
-    ![Image](https://github.com/Dysta40/PantyCMS/blob/master/_ressources/panty_config_dedipass.png)
+    ![Image](/_ressources/panty_config_dedipass.png)
 </details><br />
 2) Configurez le document de payemment comme indiqué sur les screens. <br />
 <details> 
   <summary>Configuration du document DediPass</summary>
-    ![Image](https://github.com/Dysta40/PantyCMS/blob/master/_ressources/panty_config_dedipass_url.png)
-    ![Image](https://github.com/Dysta40/PantyCMS/blob/master/_ressources/panty_config_dedipass_url_redir.png)
+    ![Image](/_ressources/panty_config_dedipass_url.png)
+    ![Image](/_ressources/panty_config_dedipass_url_redir.png)
 </details><br />
 3) Rendez-vous dans le dossier system/panty/configs et ouvrez le fichier Panty.php pour configurer le CMS.<br />
 4) A la ligne METHODE_PAYEMENT, choisissez 2<br />
 5) Récuprérer la clé public et la clé privé de votre document de payement DediPass comme sur le screen. <br />
 <details> 
   <summary>Configuration du document DediPass</summary>
-    ![Image](https://github.com/Dysta40/PantyCMS/blob/master/_ressources/panty_config_dedipass_key.png)
+    ![Image](/_ressources/panty_config_dedipass_key.png)
 </details><br />
 6) Entrez la PUBLIC_KEY_DEDIPASS & la PRIVATE_KEY_DEDIPASS dans les lignes qui correspondent<br />
 

@@ -34,6 +34,9 @@ if (URL_REWRITING){
 /* set the assets directory */
 if (!defined('TMVC_ASSDIR'))
 	define('TMVC_ASSDIR', BASE_URL . '/assets/');
+/* set the admin template directory */
+if (!defined('PANTY_THEME_ADMIN'))
+	define('PANTY_THEME_ADMIN', '_admin');
 require TMVC_BASEDIR . 'sysfiles' . DS . 'TinyMVC.php';
 /* instantiate */
 $tmvc = new tmvc();

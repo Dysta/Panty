@@ -7,6 +7,11 @@
 
  
  /* Configuration de base du CMS */
+define('TITLE', 'Panty'); // Titre du site/Nom du serveur
+	 /* Variable vous permettant de changer le thème du CMS. Le nom du thème est égal au nom du dossier contenu dans system > smarty > templates.
+		Faites attention aux majuscules/minuscules. Si vous avez une erreur concernant le thème, c'est que le nom entré n'est pas le bon. */
+if (!defined('PANTY_THEME')) // Ne touchez pas cette ligne
+	define('PANTY_THEME', 'nw'); // Thème du CMS
 	 /* Affichage ou non des erreurs CMS. 
 		Utile lorsque vous installez le CMS pour la première fois ou que vous avez des pages blanche inexpliqué. */ 
 define('VIEW_ERROR', TRUE); // Afficher ou non les erreurs du CMS (TRUE pour afficher FALSE pour cacher)
@@ -39,12 +44,6 @@ define('PRIVATE_KEY_DEDIPASS', "4a75f138e7f53792421a7b37934b3e4daf2f76d1");
 define('GMLVL_ADMIN', 5); // GMLVL minimum pour accèder aux pages d'administration et au site quand il est en maintenance
 		
  /* Configuration global du CMS */
-define('TITLE', 'Panty'); // Titre du site/Nom du serveur
-	 /* Variable vous permettant de changer le thème du CMS. Le nom du thème est égal au nom du dossier contenu dans system > smarty > templates.
-		Faites attention aux majuscules/minuscules. Si vous avez une erreur concernant le thème, c'est que le nom entré n'est pas le bon. */
-if (!defined('PANTY_THEME')) // Ne touchez pas cette ligne
-	define('PANTY_THEME', 'nw'); // Thème du CMS
-
 	 /* Configuration des differents URL */
 define('VOTE_URL', 'http://127.0.0.1/tool/vote.php'); // URL de vote
 define('BOARD_URL', 'http://google.fr/'); // URL de votre forum

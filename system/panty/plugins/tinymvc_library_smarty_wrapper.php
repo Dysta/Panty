@@ -17,7 +17,9 @@ class TinyMVC_Library_Smarty_Wrapper Extends Smarty
 		$this->setCacheDir(TMVC_BASEDIR . '/smarty/cache/');
 		$this->smarty->assign('URL_ASSETS', TMVC_ASSDIR . PANTY_THEME . '/');
 		$this->smarty->assign('URL_ASSETS_GLOBAL', TMVC_ASSDIR . 'global/');
+		$this->smarty->assign('URL_ASSETS_ADMIN', TMVC_ASSDIR . 'global/_admin/');
 		$this->smarty->assign('THEME', PANTY_THEME);
+		$this->smarty->assign('THEME_ADMIN', '_admin');
 		$this->smarty->assign('TITLE', TITLE);
 		$this->smarty->assign('URL', TMVC_URL);
 		$this->smarty->assign('VOTE_URL', VOTE_URL);

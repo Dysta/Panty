@@ -56,7 +56,7 @@ class Administration_Controller extends TinyMVC_Controller
 					header("Location: " . TMVC_URL . "/user/banned");
 					exit;
 				} //($_SESSION['banned']) == 1
-			$this->smarty->display(PANTY_THEME . '/manage-index.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/manage-index.tpl');
 		}
 	}
 	function news()
@@ -89,7 +89,7 @@ class Administration_Controller extends TinyMVC_Controller
 			} //isset($_POST['news']) && strlen($_POST['message']) >= 20 && strlen($_POST['title']) >= 2
 			$news = $this->news->get_all_news();
 			$this->smarty->assign('array_news', $news);
-			$this->smarty->display(PANTY_THEME . '/manage-news.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/manage-news.tpl');
 		}
 	}
 	function message()
@@ -119,7 +119,7 @@ class Administration_Controller extends TinyMVC_Controller
 			$bug = $this->server->get_bug();
 			$this->smarty->assign('array_bug', $bug);
 			
-			$this->smarty->display(PANTY_THEME . '/manage-msg.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/manage-msg.tpl');
 		}
 	}
 	function delete_new()
@@ -157,7 +157,7 @@ class Administration_Controller extends TinyMVC_Controller
 				);
 			endif;
 			$this->smarty->assign($dat);
-			$this->smarty->display(PANTY_THEME . '/message.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/message.tpl');
 		}
 	}
 	function delete_comment()
@@ -195,7 +195,7 @@ class Administration_Controller extends TinyMVC_Controller
 				);
 			endif;
 			$this->smarty->assign($dat);
-			$this->smarty->display(PANTY_THEME . '/message.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/message.tpl');
 		}
 	}
 	function delete_bug()
@@ -233,7 +233,7 @@ class Administration_Controller extends TinyMVC_Controller
 				);
 			endif;
 			$this->smarty->assign($dat);
-			$this->smarty->display(PANTY_THEME . '/message.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/message.tpl');
 		}
 	}
 	function shop_items()
@@ -264,7 +264,7 @@ class Administration_Controller extends TinyMVC_Controller
 			}
 			$items = $this->shop->get_all_items();
 			$this->smarty->assign('array_items', $items);
-			$this->smarty->display(PANTY_THEME . '/manage-items.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/manage-items.tpl');
 		}
 	}
 	function delete_shop_items()
@@ -302,7 +302,7 @@ class Administration_Controller extends TinyMVC_Controller
 				);
 			endif;
 			$this->smarty->assign($dat);
-			$this->smarty->display(PANTY_THEME . '/message.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/message.tpl');
 		}
 	}
 	function account()
@@ -329,7 +329,7 @@ class Administration_Controller extends TinyMVC_Controller
 			$this->smarty->assign('array_account_unban', $account_unban);
 			$account_ban = $this->user->get_account_ban();
 			$this->smarty->assign('array_account_ban', $account_ban);
-			$this->smarty->display(PANTY_THEME . '/manage-account.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/manage-account.tpl');
 		}
 	}
 	function logs()
@@ -357,7 +357,7 @@ class Administration_Controller extends TinyMVC_Controller
 			$this->load->model('Shop_Model', 'shop');
 			$shop_log = $this->shop->get_shop_log();
 			$this->smarty->assign('array_shop_log', $shop_log);
-			$this->smarty->display(PANTY_THEME . '/manage-log.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/manage-log.tpl');
 		}
 	}
 	function ban_account()
@@ -395,7 +395,7 @@ class Administration_Controller extends TinyMVC_Controller
 				);
 			endif;
 			$this->smarty->assign($dat);
-			$this->smarty->display(PANTY_THEME . '/message.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/message.tpl');
 		}
 	}
 	function unban_account()
@@ -434,7 +434,7 @@ class Administration_Controller extends TinyMVC_Controller
 				);
 			endif;
 			$this->smarty->assign($dat);
-			$this->smarty->display(PANTY_THEME . '/message.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/message.tpl');
 		}
 	}
 	function manage_account()
@@ -480,7 +480,7 @@ class Administration_Controller extends TinyMVC_Controller
 					$this->smarty->assign('user_data', $datas);
 					$chars_data = $this->user->get_account_characters($id);
 					$this->smarty->assign('chars_data', $chars_data);
-					$this->smarty->display(PANTY_THEME . '/manage-info.tpl');
+					$this->smarty->display(PANTY_THEME_ADMIN . '/manage-info.tpl');
 				} //$user_data
 				else {
 					$dat = array(
@@ -488,7 +488,7 @@ class Administration_Controller extends TinyMVC_Controller
 						"content" => "Impossible de voir ce compte : il n'existe pas/plus. Si vous pensez qu'il s'agit d'une erreur, contactez un administrateur."
 					);
 					$this->smarty->assign($dat);
-					$this->smarty->display(PANTY_THEME . '/message.tpl');
+					$this->smarty->display(PANTY_THEME_ADMIN . '/message.tpl');
 				}
 			}
 		}
@@ -528,7 +528,7 @@ class Administration_Controller extends TinyMVC_Controller
 				);
 			endif;
 			$this->smarty->assign($dat);
-			$this->smarty->display(PANTY_THEME . '/message.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/message.tpl');
 		}
 	}
 	function delete_account()
@@ -567,7 +567,7 @@ class Administration_Controller extends TinyMVC_Controller
 				);
 			endif;
 			$this->smarty->assign($dat);
-			$this->smarty->display(PANTY_THEME . '/message.tpl');
+			$this->smarty->display(PANTY_THEME_ADMIN . '/message.tpl');
 		}
 	}
 }

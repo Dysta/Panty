@@ -2,4 +2,4 @@
   <b>TinyMVC Error:</b> <?=$errors['errstr']?><br />
   <b>File:</b> <?=$errors['errfile']?><br />
   <b>Line:</b> <?=$errors['errline']?>
-</span> 
+</span>

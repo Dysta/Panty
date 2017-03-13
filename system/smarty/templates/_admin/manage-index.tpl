@@ -2,49 +2,86 @@
 {block name=title}Administration{/block}<br/>
 {block name=body}
 		<div class="col-md-10">
-		  	<div class="row">
-		  		<div class="col-md-12">
-		  			<div class="row">
-		  				<div class="col-md-12">
-		  					<div class="content-box-header">
-			  					<div class="panel-title">Bienvenue sur Panty Admin</div>
-				  			</div>
-				  			<div class="content-box-large box-with-header">
-								<b>Bonjour {$smarty.session.pseudo} !</b> 
-								<br /><br />
-								Bienvenue sur le panel d'administration de Panty ! Ce panel est disponible pour les membres du staff autorisé. Pour changer le <b>GMLVL_ADMIN nécéssaire</b> pour acceder à cette page, rendez-vous dans la configuration de Panty et cherchez <b>GMLVL_ADMIN</b>.
-								<br />
-								Sur votre droite, vous avez toutes les catégories qui vous permettrons de gérer votre serveur de façon la plus optimisé possible !
-								<br />
-								Le <b>template du panel est indépendant au thème</b>, vous pouvez mettre le thème que vous voulez sur votre site, le panel sera toujours le même ! 
-								<br /><br />
-								Je vous souhaite une bonne utilisation du CMS et de ce panel !
-								<br />
-								<h2><center><a href="https://github.com/Dysta40/PantyCMS" target="_blank" title="Panty GitHub">Panty CMS</a></center></h2>
+			{if isset($note_saved)}
+			<div class="row">
+  				<div class="col-md-12">
+  					<div class="content-box-large">
+		  				<div class="panel-heading">
+							<div class="panel-title"><i class="glyphicon glyphicon-check"></i> Note enregistré !</div>
+						</div>
+		  				<div class="panel-body">
+							<div class="alert alert-success">
+								<b>Votre note a été enregistré avec succès !</b>
 							</div>
 		  				</div>
 		  			</div>
-		  		</div>
-		  	</div>
+  				</div>
+			</div>
+			{/if}
+			<div class="row">
+  				<div class="col-sm-3">
+  					<div class="content-box-large">
+		  				<div class="panel-heading">
+							<div class="panel-title"><i class="glyphicon glyphicon-check"></i> Connecté :</div>
+						</div>
+		  				<div class="panel-body">
+							<h1 style="text-align:center">{$logged}</h1>
+		  				</div>
+		  			</div>
+  				</div>
+				<div class="col-sm-3">
+  					<div class="content-box-large">
+		  				<div class="panel-heading">
+							<div class="panel-title"><i class="glyphicon glyphicon-th-large"></i> Guildes :</div>
+						</div>
+		  				<div class="panel-body">
+							<h1 style="text-align:center">{$guilds}</h1>
+		  				</div>
+		  			</div>
+  				</div>
+				<div class="col-sm-3">
+  					<div class="content-box-large">
+		  				<div class="panel-heading">
+							<div class="panel-title"><i class="glyphicon glyphicon-cog"></i> Comptes :</div>
+						</div>
+		  				<div class="panel-body">
+							<h1 style="text-align:center">{$accounts}</h1>
+		  				</div>
+		  			</div>
+  				</div>
+				<div class="col-sm-3">
+  					<div class="content-box-large">
+		  				<div class="panel-heading">
+							<div class="panel-title"><i class="glyphicon glyphicon-user"></i> Personnages :</div>
+						</div>
+		  				<div class="panel-body">
+							<h1 style="text-align:center">{$characters}</h1>
+		  				</div>
+		  			</div>
+  				</div>
+			</div>
+			{foreach from=$array_note item=note}
 			<div class="row">
 		  		<div class="col-md-12 panel-warning">
 		  			<div class="content-box-header panel-heading">
-	  					<div class="panel-title ">Note pour les admins</div>
-						<div class="panel-options">
-							<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
-							<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
-						</div>
+	  					<div class="panel-title ">Note pour les admins (dernière modification par <b>{$note.author}</b>)</div>
 		  			</div>
 		  			<div class="content-box-large box-with-header">
-			  			Cette box sert de message pour les admins ou de note personnel pour plus tard.
-						<br />
-						Pour l'éditer, rendez-vous dans <b>CHEMIN</b> et cherchez <b>Note pour les admins</b>
-						<br /><br />
-						Je vais essayer de faire en sorte que la note soit éditable et en SQL donc fonctionnement automatique. Ou alors en JavaScript !
-						<br />
-						Encore une fois, bonne utilisation du panel !
+						<form method="post">
+							<fieldset>
+								<div class="form-group">
+									<textarea id="ckeditor" class="form-control" name="message" placeholder="Contenu de la note.." rows="3">
+										{$note.content}
+									</textarea>
+								</div>
+							</fieldset>
+							<div>
+								<input class="btn btn-primary" type="submit" value="Enregistrer les modifications" name="note" />
+							</div>
+						</form>
 					</div>
 		  		</div>
 		  	</div>
+			{/foreach}
 		  </div>
 {/block}

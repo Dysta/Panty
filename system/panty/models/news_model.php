@@ -103,6 +103,19 @@ class News_Model extends TinyMVC_Model
 		} //$row = $this->db->next()
 		return $array_news;
 	}
+	function get_note()
+	{
+		$this->db->query('select * from panty_note ORDER BY id DESC LIMIT 1');
+		$array_note = array();
+		$i          = 1;
+		while ($row = $this->db->next()) {
+			$array_note[$i]['id']     = $row['id'];
+			$array_note[$i]['content'] = $row['content'];
+			$array_note[$i]['author'] = htmlentities($row['author'], ENT_QUOTES, "UTF-8");
+			$i++;
+		} //$row = $this->db->next()
+		return $array_note;
+	}
 	function get_all_comments()
 	{
 		$this->db->query('select * from panty_comments ORDER BY id DESC');
@@ -123,6 +136,13 @@ class News_Model extends TinyMVC_Model
 			'author' => $user,
 			'title' => $title,
 			'type' => $type,
+			'content' => $message
+		));
+	}
+	function add_note($message, $user)
+	{
+		return $this->db->insert('panty_note', array(
+			'author' => $user,
 			'content' => $message
 		));
 	}

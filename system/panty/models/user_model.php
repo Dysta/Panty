@@ -358,7 +358,7 @@ class User_Model extends TinyMVC_Model
 	}
 	function already_used_ip($ip)
 	{
-		$request     = $this->db->query('select * from accounts where IPvote=?', array(
+		$request = $this->db->query('select * from accounts where IPvote=?', array(
 			$ip
 		));
 		$request_num = $this->db->num_rows();

@@ -56,6 +56,15 @@ class Administration_Controller extends TinyMVC_Controller
 					header("Location: " . TMVC_URL . "/user/banned");
 					exit;
 				} //($_SESSION['banned']) == 1
+			$this->load->model('News_Model', 'news');
+			if (isset($_POST['note']) && strlen($_POST['message']) >= 0) {
+				$message = trim(strip_tags($_POST['message'], '<br><font><span><b><i><strong><strike><em><s><ol><ul><blockquote><li><a><img><table><tbody><tr><td><hr>'));
+				$user    = htmlentities($_SESSION['pseudo']);
+				$this->news->add_note($message, $user);
+				$this->smarty->assign('note_saved', 'note_saved');
+			} //isset($_POST['news']) && strlen($_POST['message']) >= 20 && strlen($_POST['title']) >= 2
+			$note = $this->news->get_note();
+			$this->smarty->assign('array_note', $note);
 			$this->smarty->display(PANTY_THEME_ADMIN . '/manage-index.tpl');
 		}
 	}

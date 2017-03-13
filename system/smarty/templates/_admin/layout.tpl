@@ -87,7 +87,6 @@
 	
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{$URL_ASSETS_ADMIN}bootstrap/js/bootstrap.min.js"></script>
-	
 	<script>
 		CKEDITOR.replace( 'ckeditor' );
     </script>

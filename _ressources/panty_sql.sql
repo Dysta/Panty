@@ -36,7 +36,7 @@ CREATE TABLE `panty_news` (
   `author` varchar(50) NOT NULL,
   `type` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`,`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of panty_news
@@ -91,3 +91,19 @@ INSERT INTO `panty_log` VALUES ('10', '1', '123', '0', '06-01-2017 à 18:23:26')
 INSERT INTO `panty_log` VALUES ('11', '1', '123', '0', '06-01-2017 à 19:00:56');
 INSERT INTO `panty_log` VALUES ('12', '1', '123', '0', '06-01-2017 à 23:20:23');
 INSERT INTO `panty_log` VALUES ('13', '1', '123', '0', '06-01-2017 à 23:21:15');
+
+-- ----------------------------
+-- Table structure for `panty_note`
+-- ----------------------------
+DROP TABLE IF EXISTS `panty_note`;
+CREATE TABLE `panty_note` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` text NOT NULL,
+  `author` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of panty_note
+-- ----------------------------
+INSERT INTO `panty_note` VALUES ('25', 'Bonjour !<br />\r\n<br />\r\nBienvenu dans le panel d&#39;administration de votre site ! Ce panel a &eacute;t&eacute; con&ccedil;u par&nbsp;<strong>Dysta&nbsp;</strong>pour&nbsp;<a href=\"https://github.com/Dysta40/PantyCMS\" target=\"_blank\">PantyCMS</a>. Le template du panel admin est ind&eacute;pendant du template du site. J&#39;ai fait en sorte que le panel soit intuitif et facile d&#39;utilisation. Il est pour moi id&eacute;al &agrave; mes yeux mais rien ne vous emp&ecirc;che de faire vos propres modifications dessus par la suite.<br />\r\n<br />\r\nComme vous pouvez le voir, cette box est &eacute;ditable et permet de laisser une note &agrave; votre staff ou &agrave; vous-m&ecirc;me. Elle est facilement &eacute;ditable et avec de multiple fonctionnalit&eacute; !&nbsp;N&#39;oubliez juste pas de cliquer sur le bouton &quot;<strong>Enregistrer les modifications</strong>&quot; ci-dessous !&nbsp;Vous avez &eacute;galement la possibilit&eacute; de voir qui a &eacute;dit&eacute; cette note en dernier !<br />\r\n<br />\r\nMerci d&#39;utiliser PantyCMS. <strong>Dysta</strong>', 'Dysta');

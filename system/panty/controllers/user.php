@@ -2,7 +2,7 @@
 /**
  * user.php
  *
- * Page concernant les actions dirigées utilisateurs
+ * Page concernant les actions dirigÃ©es utilisateurs
  * Ex : Inscription, espace membre, achat de points, vote...
  *
  * @package		Panty
@@ -38,7 +38,7 @@ class User_Controller extends TinyMVC_Controller
 					$rank = 'Mod&eacute;rateur';
 					break;
 				case 3:
-					$rank = 'Maître Joueur';
+					$rank = 'MaÃ®tre Joueur';
 					break;
 				case 4:
 					$rank = 'D&eacute;veloppeur';
@@ -77,7 +77,8 @@ class User_Controller extends TinyMVC_Controller
 						exit;
 					} //($_SESSION['banned']) == 1
 					if (isset($_POST['register'])) {
-						if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['password_conf']) && isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['quest']) && isset($_POST['answ']) && isset($_POST['captcha']) && isset($_POST['rule'])) {
+						if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['password_conf']) && isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['quest']) && isset($_POST['answ']) && isset($_POST['captcha']) && isset($_POST['rule']) 
+							&& !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['password_conf']) && !empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['quest']) && !empty($_POST['answ']) && !empty($_POST['captcha'])) {
 							$this->load->model('User_Model', 'user');
 							$username      = htmlentities($_POST['username']);
 							$password      = htmlentities($_POST['password']);
@@ -321,7 +322,7 @@ class User_Controller extends TinyMVC_Controller
 			} 
 			else {
 				$this->load->model('User_Model', 'user');
-				$this->user->raz_ip(); // On remet à 0 toutes les IP qui peuvent voter
+				$this->user->raz_ip(); // On remet Ã  0 toutes les IP qui peuvent voter
 				$id            = htmlentities($_SESSION['id']);
 				$user_data     = $this->user->user_data($id);
 				$ip            = $user_data['IPvote'];
@@ -329,9 +330,9 @@ class User_Controller extends TinyMVC_Controller
 				$date_now      = time();
 				$time_vote     = ($date_now - $time_lastvote) / 60;
 				
-				$ip = $this->user->getIp(); // On récupère l'ip du compte qui veut voter
-				$this->user->change_ip($id, $ip); // on l'insère en bdd
-				$ip_check  = $this->user->already_used_ip($ip); // On vérifie si l'ip est déjà utilisé
+				$ip = $this->user->getIp(); // On rÃ©cupÃ¨re l'ip du compte qui veut voter
+				$this->user->change_ip($id, $ip); // on l'insÃ¨re en bdd
+				$ip_check  = $this->user->already_used_ip($ip); // On vÃ©rifie si l'ip est dÃ©jÃ  utilisÃ©
 				
 				if ($time_vote >= 180 && $ip_check == TRUE) {
 					unset($_SESSION['tokens']);
@@ -382,7 +383,7 @@ class User_Controller extends TinyMVC_Controller
 				} //($_SESSION['banned']) == 1
 				if (METHODE_PAYEMENT == 2) { //Si le moyen de payement est DediPass
 					$code = isset($_POST['code']) ? preg_replace('/[^a-zA-Z0-9]+/', '', $_POST['code']) : ''; 
-					if( empty($code) ) { // Si on tente d'acceder à l'url d'achat de pts sans avoir mis de code
+					if( empty($code) ) { // Si on tente d'acceder Ã  l'url d'achat de pts sans avoir mis de code
 					  $dat                = array(
 							"title" => "Erreur",
 							"content" => "Vous devez saisir un code."
@@ -395,7 +396,7 @@ class User_Controller extends TinyMVC_Controller
 						$private_key 	= PRIVATE_KEY_DEDIPASS;
 						$dedipass = file_get_contents('http://api.dedipass.com/v1/pay/?public_key='.$public_key.'&private_key='.$private_key.'&code=' . $code); 
 						$dedipass = json_decode($dedipass); 
-							if($dedipass->status == 'success') { //Si le code entré est bon
+							if($dedipass->status == 'success') { //Si le code entrÃ© est bon
 								$this->load->model('User_Model', 'user');
 								$id = $_SESSION['id'];
 								unset($_SESSION['tokens']);
@@ -426,13 +427,13 @@ class User_Controller extends TinyMVC_Controller
 					}
 				}
 				if (METHODE_PAYEMENT == 1) { //Si le moyen de payement est StarPass
-						// Déclaration des variables
+						// DÃ©claration des variables
 					$ident = $idp = $ids = $idd = $codes = $code1 = $code2 = $code3 = $code4 = $code5 = $datas = '';
 					$idp   = IDP;
-					// $ids n'est plus utilisé, mais il faut conserver la variable pour une question de compatibilité
+					// $ids n'est plus utilisÃ©, mais il faut conserver la variable pour une question de compatibilitÃ©
 					$idd   = IDD;
 					$ident = $idp . ";" . $ids . ";" . $idd;
-					// On récupère le(s) code(s) sous la forme 'xxxxxxxx;xxxxxxxx'
+					// On rÃ©cupÃ¨re le(s) code(s) sous la forme 'xxxxxxxx;xxxxxxxx'
 					if (isset($_POST['code1']))
 						$code1 = $_POST['code1'];
 					if (isset($_POST['code2']))
@@ -444,16 +445,16 @@ class User_Controller extends TinyMVC_Controller
 					if (isset($_POST['code5']))
 						$code5 = ";" . $_POST['code5'];
 					$codes = $code1 . $code2 . $code3 . $code4 . $code5;
-					// On récupère le champ DATAS
+					// On rÃ©cupÃ¨re le champ DATAS
 					if (isset($_POST['DATAS']))
 						$datas = $_POST['DATAS'];
 					// On encode les trois chaines en URL
 					$ident = urlencode($ident);
 					$codes = urlencode($codes);
 					$datas = urlencode($datas);
-					/* Envoi de la requête vers le serveur StarPass
-					Dans la variable tab[0] on récupère la réponse du serveur
-					Dans la variable tab[1] on récupère l'URL d'accès ou d'erreur suivant la réponse du serveur */
+					/* Envoi de la requÃªte vers le serveur StarPass
+					Dans la variable tab[0] on rÃ©cupÃ¨re la rÃ©ponse du serveur
+					Dans la variable tab[1] on rÃ©cupÃ¨re l'URL d'accÃ¨s ou d'erreur suivant la rÃ©ponse du serveur */
 					$get_f = @file("http://script.starpass.fr/check_php.php?ident=$ident&codes=$codes&DATAS=$datas");
 					if (!$get_f) {
 						exit("Votre serveur n'a pas acc&egrave;s au serveur de StarPass, merci de contacter votre h&eacute;bergeur.");
@@ -471,8 +472,8 @@ class User_Controller extends TinyMVC_Controller
 					$id_palier = urldecode($tab[4]);
 					// dans $type on a le type de l'offre. exemple "sms", "audiotel, "cb", etc.
 					$type      = urldecode($tab[5]);
-					// vous pouvez à tout moment consulter la liste des paliers &agrave; l'adresse : http://script.starpass.fr/palier.php
-					// Si $tab[0] ne répond pas "OUI" l'accès est refusé
+					// vous pouvez Ã  tout moment consulter la liste des paliers &agrave; l'adresse : http://script.starpass.fr/palier.php
+					// Si $tab[0] ne rÃ©pond pas "OUI" l'accÃ¨s est refusÃ©
 					// On redirige sur l'URL d'erreur
 					if (substr($tab[0], 0, 3) != "OUI") {
 						header("Location: $url");

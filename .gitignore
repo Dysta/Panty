@@ -1,0 +1,15 @@
+.vscode/
+system/smarty/templates_c/
+system/smarty/templates/eq/
+system/smarty/templates/ether/
+system/smarty/templates/jiva/
+system/smarty/templates/nakama/
+system/smarty/templates/syrma/
+system/smarty/templates/pure/
+
+assets/eq/
+assets/ether/
+assets/jiva/
+assets/nakama/
+assets/syrma/
+assets/pure/

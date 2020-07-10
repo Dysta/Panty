@@ -11,7 +11,7 @@ define('TITLE', 'Panty'); // Titre du site/Nom du serveur
 	 /* Variable vous permettant de changer le thème du CMS. Le nom du thème est égal au nom du dossier contenu dans system > smarty > templates.
 		Faites attention aux majuscules/minuscules. Si vous avez une erreur concernant le thème, c'est que le nom entré n'est pas le bon. */
 if (!defined('PANTY_THEME')) // Ne touchez pas cette ligne
-	define('PANTY_THEME', 'nw'); // Thème du CMS
+	define('PANTY_THEME', ''); // Thème du CMS
 	 /* Affichage ou non des erreurs CMS. 
 		Utile lorsque vous installez le CMS pour la première fois ou que vous avez des pages blanche inexpliqué. */ 
 define('VIEW_ERROR', TRUE); // Afficher ou non les erreurs du CMS (TRUE pour afficher FALSE pour cacher)
@@ -19,12 +19,12 @@ define('VIEW_ERROR', TRUE); // Afficher ou non les erreurs du CMS (TRUE pour aff
 define('MAINTENANCE', FALSE); // Mettre votre site en maintenance (TRUE pour activer FALSE pour désactiver)
 	 /* L'URL du CMS doit être mis correctement. Si vous constatez un bug graphique (tout est blanc, pas d'images...),
 		c'est que le problème vient probablement de là. C'est grâce à cette URL que les images sont chargées etc. */
-define('BASE_URL', 'http://127.0.0.1'); // URL du CMS (sans le / de fin)
+define('BASE_URL', 'http://127.0.0.1/Panty-master'); // URL du CMS (sans le / de fin)
 define('URL_REWRITING', true); // Utiliser le rewriting URL ? Mettre en "false" si le CMS ne s'affiche pas
 	 /* Configuration de la connexion entre la base de données et le CMS. Si vous avez des erreurs SQL vérifiez les informations.
 		Faites bien attention lorsque vous completez les informations. */
 define('DB_HOST', '127.0.0.1'); // Adresse de la base de données
-define('DB_NAME', 'local'); // Nom de la base de données
+define('DB_NAME', 'syrma'); // Nom de la base de données
 define('DB_USER', 'root'); // User de la base de données
 define('DB_PASSWORD', ''); // Mot de passe de la base de données
 define('HASH_MD5', false); // Les mots de passes sont-ils hashés en MD5 ? - Crisis Emu par exemple

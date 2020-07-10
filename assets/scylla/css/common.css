@@ -1,0 +1,140 @@
+/*
+# KITKAT TEAM WORKS - (C) 2013
+# Scylla - Red v.
+# Design by Kitty - CSS by Keldy
+*/
+
+@font-face {
+    font-family: Myriad;
+    src: url(MYRIADPRO-REGULAR.OTF);
+    font-weight:400;
+}
+body{
+	background:url(../images/bg.png) repeat;
+}
+#footer{
+	background: #EEEEEE;
+	box-shadow: 1px black;
+	height:40px;
+	width:100%;
+	top:0px;
+	position: fixed;
+	box-shadow: 0px 1px 5px 0px #DFDFDF;
+}
+#footer .login{
+	float:right;
+	position:relative;
+	padding: 5px;
+}
+#footer .search{
+	float:left;
+	padding:5px;
+}
+#header{
+	background:url(../images/header.png) no-repeat;
+	width:858px;
+	height:309px;
+	margin:0px auto;
+}
+#menu{
+	background:url(../images/gradient.png) repeat-x;
+	width:858px;
+	height:30px;
+	margin:0px auto;
+	box-shadow: 2px 3px 3px 0px #E3E3E3;
+	border-radius: 2px;
+	text-align: center;
+}
+#menu ul.black{
+	list-style-type:none;
+	display:inline;
+	margin: 0px auto;
+	top:-40px;
+	position:relative;
+}
+#menu ul.black a img:hover{
+	opacity: 0.6;
+	-moz-transition: opacity ease-in 0.9s;
+}
+#menu ul.black a img{
+	-moz-transition: opacity ease-in 0.9s;
+}
+#menu li.black{
+	padding: 8px;
+	display:inline;
+}
+#menu a.black{
+	letter-spacing:2px;
+	color:black;
+	font-family:'Myriad';
+	text-transform:uppercase;
+	color:black;
+	text-shadow:0px -1px 1px #333333;
+	-moz-transition: opacity ease-in 0.5s;
+	display:inline;
+}
+#menu a.black:hover{
+	text-decoration:none;
+	opacity: 0.6;
+	-moz-transition: opacity ease-in 0.5s;
+	display:inline;
+}
+#menu img{
+	position:relative;
+	top:-15px;
+}
+#content{
+	background:#EFEFEF;
+	width:858px;
+	min-height:900px;
+	border:2px #DFDFDF solid;
+	margin:5px auto;
+}
+#content table.center{
+	margin:5px auto;
+}
+#content td.avatar{
+	width: 130px;
+}
+#content td.text{
+	width:650px;
+	font-family:'Myriad';
+	color:#A6A6A6;
+	padding:15px;
+}
+.caption{
+	background:#9A332F;
+	border-radius:3px;
+	padding:2px;
+	width:450px;
+	color:white;
+	text-shadow:0px 0px 1px #333333;
+	margin:0px 0px 0px 5px;
+}
+.caption a{
+	color:white;
+	text-shadow:0px 0px 1px #333333;
+}
+.caption a:hover{
+	color:white;
+	text-shadow:0px 0px 1px #333333;
+}
+.pull-right a{
+	color:black;
+	font-family:'Myriad';
+	color:black;
+	text-shadow:0px -1px 1px #333333;
+	-moz-transition: opacity ease-in 0.5s;
+	display:inline;
+}
+#status{
+	background:url(../images/barre.png);
+	width:858px;
+	height:30px;
+	text-align:center;
+	font-family:'Myriad';
+	color:#A6A6A6;
+	text-shadow:1px 1px 1px #EDEDED;
+}
+.bb{width:550px;height:30px;background-color: #b4ac8d;}
+.bb:hover{width:550px;height:30px;background-color: #93866c;}

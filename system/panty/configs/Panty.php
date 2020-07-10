@@ -11,7 +11,7 @@ define('TITLE', 'Panty'); // Titre du site/Nom du serveur
 	 /* Variable vous permettant de changer le thème du CMS. Le nom du thème est égal au nom du dossier contenu dans system > smarty > templates.
 		Faites attention aux majuscules/minuscules. Si vous avez une erreur concernant le thème, c'est que le nom entré n'est pas le bon. */
 if (!defined('PANTY_THEME')) // Ne touchez pas cette ligne
-	define('PANTY_THEME', ''); // Thème du CMS
+	define('PANTY_THEME', 'nw'); // Thème du CMS
 	 /* Affichage ou non des erreurs CMS. 
 		Utile lorsque vous installez le CMS pour la première fois ou que vous avez des pages blanche inexpliqué. */ 
 define('VIEW_ERROR', TRUE); // Afficher ou non les erreurs du CMS (TRUE pour afficher FALSE pour cacher)
@@ -34,25 +34,25 @@ define('HASH_MD5', false); // Les mots de passes sont-ils hashés en MD5 ? - Cri
 define('METHODE_PAYEMENT' , 2);
 	 /* Configuration de StarPass (Vérifiez que l'achat de point est activé dans les modules en bas de la page).
 		Pour Starpass et sa configuration, basez vous sur l'image situé dans le dossier "_ressource" (panty_config_starpass)*/
-define('IDP', 114664); // IDP starpass
-define('IDD', 387895); // IDD starpass
+define('IDP', 000000); // IDP starpass
+define('IDD', 000000); // IDD starpass
 	 /* Configuration de DediPass (Vérifiez que l'achat de point est activé dans les modules en bas de la page).
 		Pour DediPass et sa configuration, basez vous sur les images situé dans le dossier "_ressource" (panty_config_dedipass)*/
-define('PUBLIC_KEY_DEDIPASS', "4087611a07686a49b647b26f6530667b");
-define('PRIVATE_KEY_DEDIPASS', "4a75f138e7f53792421a7b37934b3e4daf2f76d1");
+define('PUBLIC_KEY_DEDIPASS', '');
+define('PRIVATE_KEY_DEDIPASS', '');
 	 /* Configuration Admin */
 define('GMLVL_ADMIN', 5); // GMLVL minimum pour accèder aux pages d'administration et au site quand il est en maintenance
 		
  /* Configuration global du CMS */
 	 /* Configuration des differents URL */
-define('VOTE_URL', 'http://127.0.0.1/tool/vote.php'); // URL de vote
-define('BOARD_URL', 'http://google.fr/'); // URL de votre forum
-define('DOFUS_URL', 'http://localhost/Panty/index.php'); // URL de téléchargement pour l'installateur DOFUS 1.29.1
-define('LAUNCHER_URL', 'http://127.0.0.1/tool/other.php'); // URL de téléchargement pour le launcher/l'installateur de votre serveur
+define('VOTE_URL', ''); // URL de vote
+define('BOARD_URL', ''); // URL de votre forum
+define('DOFUS_URL', ''); // URL de téléchargement pour l'installateur DOFUS 1.29.1
+define('LAUNCHER_URL', ''); // URL de téléchargement pour le launcher/l'installateur de votre serveur
 define('TRAILER_URL', 'https://www.youtube.com/embed/gw3sg_hsFeY'); // Trailer du serveur
-define('FB_URL', 'http://127.0.0.1/tool/other.php'); // Url Facebook
-define('TW_URL', 'http://127.0.0.1/tool/other.php'); // Url Twitter
-define('YT_URL', 'http://127.0.0.1/tool/other.php'); // Url Youtube
+define('FB_URL', ''); // Url Facebook
+define('TW_URL', ''); // Url Twitter
+define('YT_URL', ''); // Url Youtube
 		
 	 /* Configuration des modules du CMS. Mettre TRUE pour activer et FALSE pour désactiver */	
 define('USE_SHOP', TRUE); // Utilisation de la boutique ou pas ? (Si boutique en jeu mettez FALSE)
@@ -63,13 +63,13 @@ define('USE_BUGTRACKER', TRUE); // Utilisation du bugtracker ou pas ? (Si vous v
 define('USE_COMMENT', TRUE); // Utilisation des commentaires ou pas ? (Si vous voulez bloquez l'ajout de commentaire mettez FALSE)
 
  /* Parametrage des gains de points. */
-define('SHOP_TOKENS', 10000); // Nombre de points gagnés pour un code audio
-define('VIP_SHOP_TOKENS', 20); // Nombre de points gagnés pour un code audio en étant VIP
+define('SHOP_TOKENS', 1000); // Nombre de points gagnés pour un code audio
+define('VIP_SHOP_TOKENS', 2000); // Nombre de points gagnés pour un code audio en étant VIP
 
 define('VOTE_TOKENS', 200); // Nombre de points gagnés pour un vote
 define('VIP_VOTE_TOKENS', 400); // Nombre de points gagnés pour un vote en étant VIP
 
-define('VIP_TOKENS', 2); // Nombre de points payés pour passer VIP
+define('VIP_TOKENS', 2500); // Nombre de points payés pour passer VIP
 define('VIP_RED', 0); // Réduction en pourcentage pour la boutique pour les VIP (2 signifie 2% de réduction) - Mettre à 0 pour désactiver
 
 define('BONUS', FALSE); // Active le BONUS vote ou pas (true activer, false desactivé)

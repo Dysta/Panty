@@ -1,5 +1,3 @@
-﻿SET FOREIGN_KEY_CHECKS=0;
-
 ALTER TABLE `accounts` ADD `timevote` BIGINT(100) NOT NULL DEFAULT '0';
 ALTER TABLE `accounts` ADD `votes` INT(4) NOT NULL DEFAULT '0';
 ALTER TABLE `accounts` ADD `points` INT(4) NOT NULL DEFAULT '0';

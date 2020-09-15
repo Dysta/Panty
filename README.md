@@ -35,7 +35,7 @@ Configuration de DediPass
 	<img src="_ressources/panty_config_dedipass.png"><br />
 2) Configurez le document de payemment comme indiqué sur les screens. <br />
   <summary>Configuration du document DediPass</summary>
-  <img src="_ressources/panty_config_dedipass_url.png"><br />
+  <img src="_ressources/panty_config_dedipass_url.png">
   <img src="_ressources/panty_config_dedipass_url_redir.png"><br />
 3) Rendez-vous dans le dossier system/panty/configs et ouvrez le fichier Panty.php pour configurer le CMS.<br />
 4) A la ligne METHODE_PAYEMENT, choisissez 2<br />

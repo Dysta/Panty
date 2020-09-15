@@ -21,10 +21,8 @@ Configuration de StarPass
 ====
 
 1) Rendez-vous sur le site de StarPass et créez un document de payemment.<br />
-<details> 
   <summary>Configuration du document StarPass</summary>
-	<img src="_ressources/panty_config_starpass.png">
-</details><br />
+	<img src="_ressources/panty_config_starpass.png"><br />
 2) Rendez-vous dans le dossier system/panty/configs et ouvrez le fichier Panty.php pour configurer le CMS.<br />
 3) A la ligne METHODE_PAYEMENT, choisissez 1<br />
 4) Entrez votre IDD & votre IPD StarPass dans les lignes qui correspondent<br />
@@ -33,16 +31,12 @@ Configuration de DediPass
 ====
 
 1) Rendez-vous sur le site de DediPass et créez un document de payemment en séléctionnant l'option produit unique.<br />
-<details> 
   <summary>Configuration du document DediPass</summary>
-    ![Image](/_ressources/panty_config_dedipass.png)
-</details><br />
+	<img src="_ressources/panty_config_dedipass.png"><br />
 2) Configurez le document de payemment comme indiqué sur les screens. <br />
-<details> 
   <summary>Configuration du document DediPass</summary>
     ![Image](/_ressources/panty_config_dedipass_url.png)
-    ![Image](/_ressources/panty_config_dedipass_url_redir.png)
-</details><br />
+    ![Image](/_ressources/panty_config_dedipass_url_redir.png)<br />
 3) Rendez-vous dans le dossier system/panty/configs et ouvrez le fichier Panty.php pour configurer le CMS.<br />
 4) A la ligne METHODE_PAYEMENT, choisissez 2<br />
 5) Récuprérer la clé public et la clé privé de votre document de payement DediPass comme sur le screen. <br />

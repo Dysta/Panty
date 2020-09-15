@@ -40,10 +40,8 @@ Configuration de DediPass
 3) Rendez-vous dans le dossier system/panty/configs et ouvrez le fichier Panty.php pour configurer le CMS.<br />
 4) A la ligne METHODE_PAYEMENT, choisissez 2<br />
 5) Récuprérer la clé public et la clé privé de votre document de payement DediPass comme sur le screen. <br />
-<details> 
   <summary>Configuration du document DediPass</summary>
-    ![Image](/_ressources/panty_config_dedipass_key.png)
-</details><br />
+	<img src="_ressources/panty_config_dedipass_key.png"><br />
 6) Entrez la PUBLIC_KEY_DEDIPASS & la PRIVATE_KEY_DEDIPASS dans les lignes qui correspondent<br />
 
 Fonctionnalités

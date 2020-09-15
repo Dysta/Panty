@@ -23,7 +23,7 @@ Configuration de StarPass
 1) Rendez-vous sur le site de StarPass et créez un document de payemment.<br />
 <details> 
   <summary>Configuration du document StarPass</summary>
-    ![Image](/_ressources/panty_config_starpass.png)
+	<img src="_ressources/panty_config_starpass.png">
 </details><br />
 2) Rendez-vous dans le dossier system/panty/configs et ouvrez le fichier Panty.php pour configurer le CMS.<br />
 3) A la ligne METHODE_PAYEMENT, choisissez 1<br />
